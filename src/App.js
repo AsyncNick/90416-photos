@@ -1,25 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// CSS imports
+import './index.css';
+// Material
+import Container from '@material-ui/core/Container';
+// Local
+import TabsBar from './components/tabsbar';
+import PhotosContainer from './photosContainer';
+import BottomNav from './components/bottomNav';
+
+// bootstrap 
+//import Jumbotron from 'react-bootstrap/Jumbotron';
 
 function App() {
+  // <div className='jumbo'>
+  //       <p>
+  //         <h1> 90416 Photography </h1>
+  //         <br />
+  //         <h3> Savannah Photography Studio </h3>
+  //         <h3> Photos by Nicky Laczko </h3>
+  //         <h3> Looking to have photos done? Contact Us</h3>
+  //       </p>
+  //     </div>
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="App" style={{ backgroundColor: '#EAE3EA' }}>
+      <TabsBar
+        left='90416 Photography'
+        center="About Us"
+        right="Photos"
+      />
+      <PhotosContainer />
+      <BottomNav />
+    </div >
   );
 }
 
